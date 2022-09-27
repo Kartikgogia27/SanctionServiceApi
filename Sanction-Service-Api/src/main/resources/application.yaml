@@ -1,0 +1,13 @@
+server:
+    port: 8080
+javax:
+    sql:
+        DataSource:
+            pocDataSource:
+                dataSourceClassName: oracle.jdbc.pool.OracleDataSource
+                dataSource:
+                    url: jdbc:oracle:thin:@172.22.32.45:1521/sanction
+                    user: wf_test
+                    password: wftest123
+
+
