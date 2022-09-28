@@ -26,8 +26,10 @@ public class StaffListRepo {
 		if (request.getFlag().equalsIgnoreCase("S")) {
 
 			Query qlQuery = entityManager
-					.createNativeQuery("SELECT  b.SSOID,b.DISPLAYNAME,a.USER_ID FROM SSO.MST_USER a "
-							+ "LEFT JOIN SSO.USERS_DTL_SSO b ON b.SSOID=a.SSO_ID WHERE a.USER_ID  in (:data)");
+					.createNativeQuery("SELECT  b.SSOID,b.DISPLAYNAME,ab.USER_ID FROM SSO.MST_USER a "
+							+ "LEFT JOIN SSO.USERS_DTL_SSO b ON b.SSOID=a.SSO_ID "
+							+ "LEFT JOIN SSO.DTL_USER_ASSIGNMENT ab on  ab.USER_ID=a.USER_ID "
+							+ "WHERE a.USER_ID  in (:data)");
 			qlQuery.setParameter("data", request.getAssignmentId());
 			List<Object[]> authors = qlQuery.getResultList();
 			for (Object[] a : authors) {
