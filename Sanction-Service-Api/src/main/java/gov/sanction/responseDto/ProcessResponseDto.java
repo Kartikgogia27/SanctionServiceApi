@@ -17,6 +17,10 @@ public class ProcessResponseDto {
 
 	
 
+	public void setTaskdetails(List<ProcessDetailDto> taskdetails) {
+		this.taskdetails = taskdetails;
+	}
+
 	public BigDecimal getLevelTypeId() {
 		return levelTypeId;
 	}
@@ -46,7 +50,7 @@ public class ProcessResponseDto {
 		return taskdetails;
 	}
 
-	public void setTaskdetails(List<ProcessDetailDto> taskdetails) {
+	public void LevelDetailDto(List<ProcessDetailDto> taskdetails) {
 		this.taskdetails = taskdetails;
 	}
 
@@ -62,6 +66,12 @@ public class ProcessResponseDto {
 
 	public ProcessResponseDto() {
 		super();
+	}
+
+	@Override
+	public String toString() {
+		return "ProcessResponseDto [levelTypeId=" + levelTypeId + ", levelType=" + levelType + ", inchargeRoleID="
+				+ inchargeRoleID + ", taskdetails=" + taskdetails + "]";
 	}
 
 	

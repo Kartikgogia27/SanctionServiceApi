@@ -7,7 +7,7 @@
     <persistence-unit name="designation" transaction-type="JTA"> 
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <jta-data-source>pocDataSource</jta-data-source> 
-        <class>gov.sanction.response.ProcessResponse</class>  
+      
         
         <properties> 
           

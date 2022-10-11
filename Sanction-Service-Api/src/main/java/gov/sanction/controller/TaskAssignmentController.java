@@ -20,12 +20,9 @@ import gov.sanction.service.TaskService;
 @Path("/")
 public class TaskAssignmentController {
 	
-	
-
 		
 		@Inject
 		private TaskService  taskService;
-		
 		
 		
 		@Path("/getTaskDetails")
